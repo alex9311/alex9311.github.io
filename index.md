@@ -4,3 +4,5 @@
 
 layout: home
 ---
+
+![](/images/mountain-pano.jpg "Google photos generated panorama from Mt. Si")
