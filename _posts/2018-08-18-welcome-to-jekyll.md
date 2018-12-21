@@ -24,6 +24,6 @@ Took about 30 minutes to get it all working plus a bit of wait time for the DNS 
 So far, I am very impressed.
 Being able to test locally with a quick `jekyll serve` from a copy of my repo is great.
 Further, simply pushing to `master` on my repo triggers a build which updates my live site.
-I'm planinng to spend some time looking at open source templates and integrating Google Analytics.
+I'm planning to spend some time looking at open source templates and integrating Google Analytics.
 
 ![jekyll-hide](https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Dr_Jekyll_and_Mr_Hyde_poster_edit2.jpg/1024px-Dr_Jekyll_and_Mr_Hyde_poster_edit2.jpg)
