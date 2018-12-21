@@ -17,7 +17,7 @@ title: Alexander Simes
 description: >- # this means to ignore newlines until "baseurl:"
   Alex's personal site
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://alexandersimes.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  alex9311
 linkedin_username: alex-simes
 google_analytics: UA-90966962-1
