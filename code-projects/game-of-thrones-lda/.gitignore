@@ -1,0 +1,8 @@
+.DS_Store
+pages/*
+books/*
+*.csv
+*.data
+*.pkl
+model_algo-1
+__pycache__
