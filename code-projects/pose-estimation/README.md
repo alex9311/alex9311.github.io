@@ -12,20 +12,19 @@ This code works off an existing [pose estimation repo](https://github.com/leoxia
 Start your docker container with:
 ```
 nvidia-docker run --rm -it \
-    -e DISPLAY=$DISPLAY \
-    -v /tmp/.X11-unix:/tmp/.X11-unix \
-    -v $(pwd)/output:/output \
-    -v $(pwd)/videos:/videos \
-    -v $(pwd)/models:/pose_root/models \
-    -w /pose_root \
-	pose_estimator \
-	/bin/bash
+  -v $(pwd)/output:/output \
+  -v $(pwd)/videos:/videos \
+  -v $(pwd)/models:/models \
+  -w /pose_root \
+  pose_estimator \
+  /bin/bash
 ```
 Once the container is running, you can run inference with:
 ```
 python tools/inference.py \
-	--cfg config.yaml \
-	--videoFile /videos/erg-concept2.mp4 \
-	TEST.MODEL_FILE \
-	/models/pytorch/pose_coco/pose_hrnet_w32_384x288.pth
+  --cfg inference-config.yaml \
+  --videoFile videos/rocky.mp4 \
+  --inference_fps 1 \
+  TEST.MODEL_FILE \
+  models/pytorch/pose_coco/pose_hrnet_w32_384x288.pth
 ```

@@ -1,5 +1,7 @@
 FROM nvidia/cuda:10.2-cudnn7-devel-ubuntu16.04
 
+ENV OPENCV_VERSION="3.4.6"
+
 # Basic toolchain
 RUN apt-get update && apt-get install -y \
         apt-utils \
@@ -16,6 +18,8 @@ RUN apt-get update && apt-get install -y \
         nano \
         python3-pip \
         python3-dev \
+        python3-tk \
+        libx264-dev \
     && cd /usr/local/bin \
     && ln -s /usr/bin/python3 python \
     && pip3 install --upgrade pip \
@@ -43,9 +47,8 @@ RUN apt-get update && apt-get install -y \
         libdlib-dev && \
     apt-get autoremove -y
 
-ENV OPENCV_VERSION="3.4.6"
 
-# Install OpenCV + OpenCV contrib
+# Install OpenCV + OpenCV contrib (takes forever)
 RUN mkdir -p /tmp && \
     cd /tmp && \
     wget --no-check-certificate -O opencv.zip https://github.com/opencv/opencv/archive/${OPENCV_VERSION}.zip && \
@@ -73,32 +76,37 @@ RUN mkdir -p /tmp && \
     rm -rf opencv-${OPENCV_VERSION} opencv.zip opencv_contrib-${OPENCV_VERSION} opencv_contrib.zip && \
     cd /
 
+# Compile and install ffmpeg from source
+RUN git clone https://github.com/FFmpeg/FFmpeg /root/ffmpeg && \
+    cd /root/ffmpeg && \
+    ./configure --enable-gpl --enable-libx264 --enable-nonfree --disable-shared --extra-cflags=-I/usr/local/include && \
+    make -j8 && make install -j8
 
+# clone deep-high-resolution-net
 ARG POSE_ROOT=/pose_root
 RUN git clone https://github.com/leoxiaobin/deep-high-resolution-net.pytorch.git $POSE_ROOT
 WORKDIR $POSE_ROOT
 RUN mkdir output && mkdir log
 
-RUN pip install -r requirements.txt
-
-RUN pip3 install torch==1.1.0 \
+RUN pip3 install -r requirements.txt && \
+    pip3 install torch==1.1.0 \
     torchvision==0.3.0 \
-    opencv-python
+    opencv-python \
+    pillow==6.2.1
 
+# build deep-high-resolution-net lib
 WORKDIR $POSE_ROOT/lib
 RUN make
 
+# install COCO API
 ARG COCOAPI=/cocoapi
 RUN git clone https://github.com/cocodataset/cocoapi.git $COCOAPI
 WORKDIR $COCOAPI/PythonAPI
 # Install into global site-packages
 RUN make install
 
-RUN apt-get update && apt-get install -y \
-        python3-tk \
-    && apt-get autoremove -y
-
+# download fastrrnn pretrained model for person detection
 RUN python -c "import torchvision; model = torchvision.models.detection.fasterrcnn_resnet50_fpn(pretrained=True); model.eval()"
 
-COPY demo.py $POSE_ROOT/tools
-COPY config.yaml $POSE_ROOT/
+COPY inference.py $POSE_ROOT/tools
+COPY inference-config.yaml $POSE_ROOT/
