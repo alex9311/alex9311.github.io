@@ -24,7 +24,7 @@ Once the container is running, you can run inference with:
 python tools/inference.py \
   --cfg inference-config.yaml \
   --videoFile videos/rocky.mp4 \
-  --inference_fps 1 \
+  --inferenceFps 1 \
   TEST.MODEL_FILE \
   models/pytorch/pose_coco/pose_hrnet_w32_384x288.pth
 ```

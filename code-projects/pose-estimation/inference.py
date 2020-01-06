@@ -183,7 +183,7 @@ def parse_args():
     parser.add_argument('--cfg',  type=str, required=True)
     parser.add_argument('--videoFile', type=str, required=True)
     parser.add_argument('--outputDir', type=str, default='/output/')
-    parser.add_argument('--inference_fps', type=int, default=10)
+    parser.add_argument('--inferenceFps', type=int, default=10)
 
     parser.add_argument('opts',
                         help='Modify config options using the command-line',
@@ -230,10 +230,10 @@ def main():
     # Loading an video
     vidcap = cv2.VideoCapture(args.videoFile)
     fps = vidcap.get(cv2.CAP_PROP_FPS)
-    if fps < args.inference_fps:
-        print('desired inference fps is '+str(args.inference_fps)+' but video fps is '+str(fps))
+    if fps < args.inferenceFps:
+        print('desired inference fps is '+str(args.inferenceFps)+' but video fps is '+str(fps))
         exit()
-    every_nth_frame = round(fps/args.inference_fps)
+    every_nth_frame = round(fps/args.inferenceFps)
 
     success, image = vidcap.read()
     count = 0
@@ -283,7 +283,7 @@ def main():
     os.system("ffmpeg -pattern_type glob -i '"
               + pose_dir
               + "/*.jpg' -c:v libx264 -vf fps="
-              + str(30)+" -pix_fmt yuv420p /output/movie.mp4")
+              + str(args.inferenceFps)+" -pix_fmt yuv420p /output/movie.mp4")
 
 
 if __name__ == '__main__':
