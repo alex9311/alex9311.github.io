@@ -1,3 +1,5 @@
+Blog about this code project: https://alexandersimes.com/unsupervised/machine/learning/nlp/sagemaker/2019/09/01/got.html
+
 Preprocess epub files into a vocab and documents with:
 ```bash
 python3 epub_to_pages.py --booksInputDir books --pagesOutputDir pages --vocabOutputFile vocab.pkl
