@@ -19,12 +19,24 @@ nvidia-docker run --rm -it \
   pose_estimator \
   /bin/bash
 ```
+
 Once the container is running, you can run inference with:
 ```
 python tools/inference.py \
   --cfg inference-config.yaml \
-  --videoFile videos/rocky.mp4 \
-  --inferenceFps 1 \
+  --videoFile /videos/erg.mp4 \
+  --inferenceFps 10 \
+  --writeBoxFrames \
   TEST.MODEL_FILE \
-  models/pytorch/pose_coco/pose_hrnet_w32_384x288.pth
+  /models/pytorch/pose_coco/pose_hrnet_w32_384x288.pth
+```
+
+```
+python tools/inference_hand_speed.py \
+  --cfg inference-config.yaml \
+  --videoFile /videos/erg.mp4 \
+  --inferenceFps 10 \
+  --writeBoxFrames \
+  TEST.MODEL_FILE \
+  /models/pytorch/pose_coco/pose_hrnet_w32_384x288.pth
 ```
