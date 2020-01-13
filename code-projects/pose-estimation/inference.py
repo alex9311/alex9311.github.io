@@ -103,6 +103,7 @@ def main():
 
     while success:
         if count % every_nth_frame != 0:
+            success, image_bgr = vidcap.read()
             count += 1
             continue
 
@@ -146,11 +147,12 @@ def main():
         csvwriter.writerow(csv_headers)
         csvwriter.writerows(csv_output_rows)
 
-    pose_dir = '/output/poses/'
-    os.system("ffmpeg -y -pattern_type glob -i '"
-              + pose_dir
-              + "/*.jpg' -c:v libx264 -vf fps="
-              + str(args.inferenceFps)+" -pix_fmt yuv420p /output/movie.mp4")
+    os.system("ffmpeg -y -r "
+          + str(args.inferenceFps)
+          + " -pattern_type glob -i '"
+          + pose_dir
+          + "/*.jpg' -c:v libx264 -vf fps="
+          + str(args.inferenceFps)+" -pix_fmt yuv420p /output/movie.mp4")
 
 
 if __name__ == '__main__':
