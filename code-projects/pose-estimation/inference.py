@@ -7,7 +7,6 @@ import csv
 import os
 import shutil
 
-from PIL import Image
 import torch
 import torch.nn.parallel
 import torch.backends.cudnn as cudnn
@@ -15,19 +14,14 @@ import torch.optim
 import torch.utils.data
 import torch.utils.data.distributed
 import torchvision
-import torchvision.transforms as transforms
 import cv2
-import numpy as np
 
 import _init_paths
 import models
 from config import cfg
 from config import update_config
-from core.function import get_final_preds
-from utils.transforms import get_affine_transform
 
 from common import COCO_KEYPOINT_INDEXES
-from common import COCO_INSTANCE_CATEGORY_NAMES
 from common import get_person_detection_boxes
 from common import get_pose_estimation_prediction
 from common import box_to_center_scale
@@ -48,7 +42,7 @@ def prepare_output_dirs(prefix='/output/'):
 def parse_args():
     parser = argparse.ArgumentParser(description='Train keypoints network')
     # general
-    parser.add_argument('--cfg',  type=str, required=True)
+    parser.add_argument('--cfg', type=str, required=True)
     parser.add_argument('--videoFile', type=str, required=True)
     parser.add_argument('--outputDir', type=str, default='/output/')
     parser.add_argument('--inferenceFps', type=int, default=10)
@@ -130,7 +124,7 @@ def main():
         pose_preds = get_pose_estimation_prediction(pose_model, image, center, scale)
 
         new_csv_row = []
-        for idx, mat in enumerate(pose_preds[0]):
+        for _, mat in enumerate(pose_preds[0]):
             x_coord, y_coord = int(mat[0]), int(mat[1])
             cv2.circle(image_bgr, (x_coord, y_coord), 4, (255, 0, 0), 2)
             new_csv_row.extend([x_coord, y_coord])

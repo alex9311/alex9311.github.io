@@ -2,22 +2,12 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-import argparse
-import csv
-import math
-import os
-import pickle
-import shutil
-import statistics
-
 from PIL import Image
 import torch
 import torch.nn.parallel
-import torch.backends.cudnn as cudnn
 import torch.optim
 import torch.utils.data
 import torch.utils.data.distributed
-import torchvision
 import torchvision.transforms as transforms
 import cv2
 import numpy as np
@@ -25,7 +15,6 @@ import numpy as np
 import _init_paths
 import models
 from config import cfg
-from config import update_config
 from core.function import get_final_preds
 from utils.transforms import get_affine_transform
 

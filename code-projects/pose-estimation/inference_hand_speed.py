@@ -24,8 +24,6 @@ import _init_paths
 import models
 from config import cfg
 from config import update_config
-from core.function import get_final_preds
-from utils.transforms import get_affine_transform
 
 from common import COCO_KEYPOINT_INDEXES
 from common import COCO_INSTANCE_CATEGORY_NAMES
@@ -162,11 +160,16 @@ def main():
         exit()
     every_nth_frame = round(fps/args.inferenceFps)
 
+    print('fps', fps)
+    print('every_nth_frame', every_nth_frame)
+
     success, image_bgr = vidcap.read()
     count = 0
 
     while success:
+        print('count', count)
         if count % every_nth_frame != 0:
+            print('skipping frame', count)
             count += 1
             continue
 
@@ -199,21 +202,6 @@ def main():
         success, image_bgr = vidcap.read()
         count += 1
 
-    if True:
-        file = open('/output/images.pkl', 'wb')
-        pickle.dump({'left_wrist_coords': left_wrist_coords,
-                     'right_wrist_coords': right_wrist_coords, 'images': images}, file)
-        file.close()
-
-    else:
-        file = open('/output/images.pkl', 'rb')
-        data = pickle.load(file)
-        images = data['images']
-        left_wrist_coords = data['left_wrist_coords']
-        right_wrist_coords = data['right_wrist_coords']
-
-        file.close()
-
     smooth_left_wrist = get_medianified_list(left_wrist_coords[:])
     smooth_right_wrist = get_medianified_list(right_wrist_coords[:])
 
@@ -228,8 +216,6 @@ def main():
 
     for idx, img_rbg in enumerate(images):
         img_bgr = cv2.cvtColor(img_rbg, cv2.COLOR_RGB2BGR)
-        raw_left_coord = (left_wrist_coords[idx][0], left_wrist_coords[idx][1])
-        raw_right_coord = (right_wrist_coords[idx][0], right_wrist_coords[idx][1])
 
         smooth_left_coord = (int(round(smooth_left_wrist[idx][0])), int(
             round(smooth_left_wrist[idx][1])))
