@@ -16,7 +16,7 @@ The [OpenPose GitHub repo](https://github.com/CMU-Perceptual-Computing-Lab/openp
 
 However, in the world of Machine Learning and Computer Vision, 2018 is ancient history!
 After more searching, I found a [new pose estimation accepted by CVPR 2019](https://arxiv.org/abs/1902.09212) called HRNet.
-HRNet outperformed all existing methods on Keypoint Detection, Multi-Person Pose Estimation and Pose Estimation tasks in the COCO dataset. 
+HRNet outperformed all existing methods on Keypoint Detection, Multi-Person Pose Estimation and Pose Estimation tasks in the COCO dataset.
 See the results table below for details.
 At the time of writing this post, the paper already had 90 citation and the github [repo](https://github.com/leoxiaobin/deep-high-resolution-net.pytorch) has over 2k stars and nearly 500 forks.
 
@@ -64,7 +64,7 @@ Finally, all the frames are stitched back together with ffmpeg.
 
 ```python
 # args.inferenceFps is an int for the inference frame rate
-# pose_dir is the directory 
+# pose_dir is the directory
 os.system("ffmpeg -pattern_type glob -i '"
           + pose_dir
           + "/*.jpg' -c:v libx264 -vf fps="
@@ -97,15 +97,15 @@ The diagram below shows the full inference process including the missing pieces 
 
 ## Apply Pose Estimation to Rowing
 Great!
-I have an easy-to-use pose estmation setup.
-The goal that inspired all this work to begin with was analysing erg technique.
+I have an easy-to-use pose estimation setup.
+The goal that inspired all this work to begin with was analyzing erg technique.
 The specific aspect of erg technique I am focused on is hand speed.
 When talking to one of my old teammates who has gone much further into rowing than I ever did, he said "*I think that if you could measure the speed of the handle that would be super useful. Then figure out which point in the drive the handle is moving fastest and slowest. Then look at the pattern of dots and figure out which is the individuals strongest and weakest position.*
 
 Speed in a 2d coordinate space is easy enough to measure, particularly when I'm not interested in particular units.
 I solved the problem with my own code.
 For the speed at point *i*, I calculate the distance between *i* and *i-1*, *i-1* and *i-2*, etc until *i-n*.
-Then I divide te total distance by *n*.
+Then I divide the total distance by *n*.
 The output units are pixels/frame, which is fine in this case.
 
 ```python
@@ -149,7 +149,7 @@ print(speed)
 
 A problem I immediately identified was the impact of false detections.
 If a single frame suddenly places the hand keypoint by the person's feet, that will come out as a huge speedup in hand speed.
-This was a tougher problem to solve, but I found helpful posts by googling for "how to smooth GPS coordinates in Python."
+This was a tougher problem to solve, but I found helpful posts by googling for "*how to smooth GPS coordinates in Python*" or "*remove outliers in GPS data*."
 GPS smoothing is a pretty popular problem and GPS data is basically a set of 2d coords.
 
 The [solution](https://gis.stackexchange.com/a/245009) I found to work turned out to be easy enough to implement.
@@ -190,27 +190,30 @@ print(fixed_coords)
 # [[1, 40], [2, 50], [3, 60], [4, 70], [5, 80], [6, 100], [7, 100], [8, 110]]
 ```
 
-I had a got a grainy erg video from a friend to test the smoothing on.
-In the video below, the original predicted coordinates are shown in green and the adjusted coordinates are shown in red.
+I had a grainy erg video from a friend to test the smoothing on.
+In the video below, the **original predicted coordinates are shown in green and the adjusted coordinates are shown in red**.
 You can see when one of the green points goes way off the hand position, the red coordinate for the same frame is much closer to the correct location.
 
 ![/images/pose-estimation-smooth-points.gif](/images/pose-estimation-smooth-points.gif)
 
 With my smoothing and speed code, it was time to check out hand speed on a pro!
-Eric Murray, a 2x olympic gold medal rower, posts videos of himself erging on youtube.
+<a href="https://en.wikipedia.org/wiki/Eric_Murray_(rower)">Eric Murray</a>, a 2x olympic gold medal rower, posts videos of himself erging on youtube.
 I grabed a short clip of him erging and ran my code.
 
 ![/images/pose-estimation-eric-murray.gif](/images/pose-estimation-eric-murray.gif)
 
 The output video looked promising but graphing the hand speed really brought out the speed pattern.
 The drives are the higher peaks and the recovery are the lower peaks.
+This indicates lower hand speed during recovery than during the drive, which is good form!
+You can also see that hand speed increases through the drive and is more consistent during recovery which is also correct.
 
 ![/images/pose-estimation-graph-hand-speed.png](/images/pose-estimation-graph-hand-speed.png)
 
 ## Thoughts
 I had a lot of fun bringing the pretty raw HRNet model into something that could be used fairly easily on a video.
 What I enjoyed even more was the straightforward math that went into calculating speed, removing outlier keypoints, and even just drawing shapes onto a frame of video.
-It's not often that I get to solve cut-and-dry problems like "find the speed between points in this array."
+It's not often that I get to solve cut-and-dry problems like that.
 
-In the next few weeks, I hope to open a PR to the HRnet repo with my generic video inference code and Docker environment.
-It would be an honor to have written the demo/quick-start code for such a successful research project.
+I opened a [pull request](https://github.com/leoxiaobin/deep-high-resolution-net.pytorch/pull/161) with the original HRnet repo with a slightly modified inference script and docker environment as they were still in need of demo code.
+I'm hoping to get that merged soon.
+It would be so cool to have written the demo/quick-start code for such a successful research project!
