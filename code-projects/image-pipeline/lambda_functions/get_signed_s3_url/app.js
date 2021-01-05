@@ -14,7 +14,7 @@ exports.handler = async (event) => {
 
 const getUploadURL = async function(event) {
   const randomID = parseInt(Math.random() * 10000000)
-  const Key = `${randomID}.jpg`
+  const Key = process.env.UploadPrefix+"/"+`${randomID}.jpg`
 
   // Get signed URL from S3
   const s3Params = {

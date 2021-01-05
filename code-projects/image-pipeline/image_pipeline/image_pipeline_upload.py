@@ -1,4 +1,5 @@
 from aws_cdk import core
+from aws_cdk import aws_s3
 from aws_cdk import aws_s3_deployment
 from aws_cdk import aws_lambda
 from aws_cdk import aws_apigateway
@@ -6,8 +7,15 @@ from aws_cdk import aws_apigateway
 
 class ImagePipelineUpload(core.Stack):
 
-    def __init__(self, scope: core.Construct, construct_id: str, public_bucket, processing_bucket) -> None:
+    def __init__(self, scope: core.Construct, construct_id: str, public_bucket_name, processing_bucket, processing_bucket_upload_prefix) -> None:
         super().__init__(scope, construct_id)
+
+        public_bucket = aws_s3.Bucket(self,
+                                      'public_bucket',
+                                      bucket_name=public_bucket_name,
+                                      public_read_access=True,
+                                      removal_policy=core.RemovalPolicy.DESTROY,
+                                      website_index_document='index.html')
 
         # static site hosted on s3 allowing uploads
         static_upload_site = aws_s3_deployment.BucketDeployment(
@@ -26,7 +34,10 @@ class ImagePipelineUpload(core.Stack):
             runtime=aws_lambda.Runtime.NODEJS_12_X,
             code=aws_lambda.Code.asset('lambda_functions/get_signed_s3_url'),
             handler='app.handler',
-            environment={'UploadBucket': processing_bucket.bucket_name},
+            environment={
+                'UploadBucket': processing_bucket.bucket_name,
+                'UploadPrefix': processing_bucket_upload_prefix,
+            },
             timeout=core.Duration.minutes(3)
         )
         # write access allows the lambda to generate signed urls
