@@ -11,7 +11,8 @@
       "dev": {
         "processing_bucket_name": "alex9311-image-processing-bucket",
         "processing_bucket_upload_prefix": "raw_uploads",
-        "public_bucket_name": "alex9311-image-pipeline-static-site"
+        "public_bucket_name": "alex9311-image-pipeline-static-site",
+        "processing_bucket_output_prefix": "processed_images"
       }
     }
   }

@@ -13,11 +13,13 @@ environment = environments.get(environment_name)
 public_bucket_name = environment.get("public_bucket_name")
 processing_bucket_name = environment.get("processing_bucket_name")
 processing_bucket_upload_prefix = environment.get("processing_bucket_upload_prefix")
+processing_bucket_output_prefix = environment.get("processing_bucket_output_prefix")
 
 
 processing_stack = ImagePipelineProcessing(app, "image-pipeline-processing",
                                            processing_bucket_name=processing_bucket_name,
-                                           processing_bucket_upload_prefix=processing_bucket_upload_prefix)
+                                           processing_bucket_upload_prefix=processing_bucket_upload_prefix,
+                                           processing_bucket_output_prefix=processing_bucket_output_prefix)
 
 ImagePipelineUpload(app, "image-pipeline-upload",
                     public_bucket_name=public_bucket_name,
