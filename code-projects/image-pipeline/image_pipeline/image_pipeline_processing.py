@@ -6,6 +6,7 @@ from aws_cdk import aws_s3
 from aws_cdk import aws_lambda
 from aws_cdk import aws_lambda_event_sources
 from aws_cdk import aws_s3_notifications
+from aws_cdk import aws_lambda_python
 
 
 class ImagePipelineProcessing(core.Stack):
@@ -24,19 +25,6 @@ class ImagePipelineProcessing(core.Stack):
 
         # this lambda will process images once they arrive in s3
         lambda_name = 'image-pipeline-image-processor'
-        current_path = str(pathlib.Path(__file__).parent.parent.absolute())
-        print(current_path)
-        commands = ("docker run --rm --entrypoint /bin/bash -v "
-                    + current_path
-                    + "/lambda_layers:/lambda_layers python:3.8 -c "
-                    + "'pip3 install Pillow==8.1.0 -t /lambda_layers/python'")
-        subprocess.run(commands, shell=True)
-        lambda_layer = aws_lambda.LayerVersion(
-            self,
-            lambda_name+"-layer",
-            compatible_runtimes=[aws_lambda.Runtime.PYTHON_3_8],
-            code=aws_lambda.Code.asset("lambda_layers"))
-
         image_processing_lambda = aws_lambda.Function(
             self,
             lambda_name,
@@ -44,7 +32,13 @@ class ImagePipelineProcessing(core.Stack):
             runtime=aws_lambda.Runtime.PYTHON_3_8,
             code=aws_lambda.Code.asset('lambda_functions/image_processor'),
             handler='app.handler',
-            layers=[lambda_layer],
+            layers=[aws_lambda_python.PythonLayerVersion(
+                self,
+                "lambda_layers",
+                entry="lambda_layer",
+                compatible_runtimes=[aws_lambda.Runtime.PYTHON_3_8]
+            )],
+
             timeout=core.Duration.minutes(3),
             retry_attempts=0,
             environment={
