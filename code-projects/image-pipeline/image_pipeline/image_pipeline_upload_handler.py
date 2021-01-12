@@ -5,7 +5,7 @@ from aws_cdk import aws_lambda
 from aws_cdk import aws_apigateway
 
 
-class ImagePipelineUpload(core.Stack):
+class ImagePipelineUploadHandler(core.Stack):
 
     def __init__(self, scope: core.Construct, construct_id: str, public_bucket_name, processing_bucket, processing_bucket_upload_prefix) -> None:
         super().__init__(scope, construct_id)
@@ -16,14 +16,6 @@ class ImagePipelineUpload(core.Stack):
                                       public_read_access=True,
                                       removal_policy=core.RemovalPolicy.DESTROY,
                                       website_index_document='index.html')
-
-        # static site hosted on s3 allowing uploads
-        static_upload_site = aws_s3_deployment.BucketDeployment(
-            self,
-            "deployStaticWebsite",
-            sources=[aws_s3_deployment.Source.asset("static_upload_site")],
-            destination_bucket=public_bucket
-        )
 
         # lambda to act as upload API handler
         lambda_name = 'image-pipeline-s3-url-generator'
@@ -74,3 +66,14 @@ class ImagePipelineUpload(core.Stack):
                     'method.response.header.Access-Control-Allow-Origin': True,
                 }
             }])
+
+        # static site hosted on s3 allowing uploads
+        static_upload_site = aws_s3_deployment.BucketDeployment(
+            self,
+            "deployStaticWebsite",
+            sources=[aws_s3_deployment.Source.asset("static_upload_site")],
+            destination_bucket=public_bucket
+        )
+
+        self.api_url = base_api.url
+        self.public_bucket = public_bucket

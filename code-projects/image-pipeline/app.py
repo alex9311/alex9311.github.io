@@ -2,7 +2,8 @@
 from aws_cdk import core
 
 from image_pipeline.image_pipeline_processing import ImagePipelineProcessing
-from image_pipeline.image_pipeline_upload import ImagePipelineUpload
+from image_pipeline.image_pipeline_upload_handler import ImagePipelineUploadHandler
+from image_pipeline.image_pipeline_upload_site import ImagePipelineUploadSite
 
 
 app = core.App()
@@ -21,10 +22,14 @@ processing_stack = ImagePipelineProcessing(app, "image-pipeline-processing",
                                            processing_bucket_upload_prefix=processing_bucket_upload_prefix,
                                            processing_bucket_output_prefix=processing_bucket_output_prefix)
 
-ImagePipelineUpload(app, "image-pipeline-upload",
-                    public_bucket_name=public_bucket_name,
-                    processing_bucket=processing_stack.processing_bucket,
-                    processing_bucket_upload_prefix=processing_bucket_upload_prefix)
+upload_handler_stack = ImagePipelineUploadHandler(app, "image-pipeline-upload-handler",
+                                                  public_bucket_name=public_bucket_name,
+                                                  processing_bucket=processing_stack.processing_bucket,
+                                                  processing_bucket_upload_prefix=processing_bucket_upload_prefix)
+
+ImagePipelineUploadSite(app, "image-pipeline-upload-site",
+                        public_bucket=upload_handler_stack.public_bucket,
+                        api_url=upload_handler_stack.api_url)
 
 
 app.synth()

@@ -7,6 +7,7 @@ from aws_cdk import aws_lambda
 from aws_cdk import aws_lambda_event_sources
 from aws_cdk import aws_s3_notifications
 from aws_cdk import aws_lambda_python
+from aws_cdk import aws_dynamodb
 
 
 class ImagePipelineProcessing(core.Stack):
@@ -22,6 +23,16 @@ class ImagePipelineProcessing(core.Stack):
                                               allowed_headers=["*"],
                                               allowed_methods=[aws_s3.HttpMethods.PUT],
                                               allowed_origins=["*"])])
+        images_table_name = "images"
+        ddb_images_table = aws_dynamodb.Table(
+            self, "ddb_images_table",
+            table_name=images_table_name,
+            partition_key={
+                "name": "id",
+                "type": aws_dynamodb.AttributeType.STRING
+            },
+            removal_policy=core.RemovalPolicy.DESTROY  # NOT recommended for production code
+        )
 
         # this lambda will process images once they arrive in s3
         lambda_name = 'image-pipeline-image-processor'
@@ -31,7 +42,7 @@ class ImagePipelineProcessing(core.Stack):
             function_name=lambda_name,
             runtime=aws_lambda.Runtime.PYTHON_3_8,
             code=aws_lambda.Code.asset('lambda_functions/image_processor'),
-            handler='app.handler',
+            handler='image_processor.handler',
             layers=[aws_lambda_python.PythonLayerVersion(
                 self,
                 "lambda_layers",
@@ -43,7 +54,8 @@ class ImagePipelineProcessing(core.Stack):
             retry_attempts=0,
             environment={
                 "OUTPUT_BUCKET": processing_bucket_name,
-                "OUTPUT_PREFIX": processing_bucket_output_prefix
+                "OUTPUT_PREFIX": processing_bucket_output_prefix,
+                "IMAGE_TABLE_NAME": images_table_name
             }
         )
         # set up lambda to trigger from s3 upload
@@ -55,6 +67,7 @@ class ImagePipelineProcessing(core.Stack):
 
         # will need to read the raw image and write processed images
         processing_bucket.grant_read_write(image_processing_lambda)
+        ddb_images_table.grant_read_write_data(image_processing_lambda)
 
         # return this so the uploading stack can use them
         self.processing_bucket = processing_bucket
