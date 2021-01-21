@@ -11,4 +11,4 @@ __pycache__
 cdk.out
 
 lambda_layers/python/*
-static_upload_site/index.htm
+static_upload_site/index.html

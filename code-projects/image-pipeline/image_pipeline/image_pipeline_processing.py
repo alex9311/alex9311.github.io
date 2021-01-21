@@ -49,7 +49,6 @@ class ImagePipelineProcessing(core.Stack):
                 entry="lambda_layer",
                 compatible_runtimes=[aws_lambda.Runtime.PYTHON_3_8]
             )],
-
             timeout=core.Duration.minutes(3),
             retry_attempts=0,
             environment={

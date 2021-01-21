@@ -23,13 +23,12 @@ processing_stack = ImagePipelineProcessing(app, "image-pipeline-processing",
                                            processing_bucket_output_prefix=processing_bucket_output_prefix)
 
 upload_handler_stack = ImagePipelineUploadHandler(app, "image-pipeline-upload-handler",
-                                                  public_bucket_name=public_bucket_name,
                                                   processing_bucket=processing_stack.processing_bucket,
                                                   processing_bucket_upload_prefix=processing_bucket_upload_prefix)
 
 ImagePipelineUploadSite(app, "image-pipeline-upload-site",
-                        public_bucket=upload_handler_stack.public_bucket,
-                        api_url=upload_handler_stack.api_url)
+                        public_bucket_name=public_bucket_name,
+                        api=upload_handler_stack.api)
 
 
 app.synth()

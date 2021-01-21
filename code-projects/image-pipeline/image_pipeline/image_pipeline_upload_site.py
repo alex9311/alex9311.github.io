@@ -9,10 +9,19 @@ from string import Template
 
 class ImagePipelineUploadSite(core.Stack):
 
-    def __init__(self, scope: core.Construct, construct_id: str, public_bucket, api_url) -> None:
+    def __init__(self, scope: core.Construct, construct_id: str, public_bucket_name, api) -> None:
         super().__init__(scope, construct_id)
 
-        print("got api_url: "+api_url)
+        public_bucket = aws_s3.Bucket(self,
+                                      'public_bucket',
+                                      bucket_name=public_bucket_name,
+                                      public_read_access=True,
+                                      removal_policy=core.RemovalPolicy.DESTROY,
+                                      website_index_document='index.html')
+
+        # TODO paste deployment url here, getting it from the passed api entity doesn't work
+        api_url = ''
+
         static_template_file_name = 'static_upload_site/index-template.html'
 
         with open(static_template_file_name, 'r') as f:
