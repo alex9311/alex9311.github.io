@@ -129,7 +129,7 @@ The hike out was our shortest day.
 There were a few sections through forests that had burned in the previous years that were more exposed and sandy -- slowing our progress a bit.
 What stuck out from the day was the scale of the views looking East.
 
-![anona](/images/beck-lakes/beck-day3.jpg)
+![day 3](/images/beck-lakes/beck-day3.JPG)
 
 ### Wrap Up
 I'd highly recommend the Beck Lakes area.
