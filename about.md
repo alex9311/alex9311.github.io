@@ -11,4 +11,4 @@ Professionally, I work in the data science space and have been in healthcare tec
 I'm getting into coaching track and cross country and am very interested in psyiotherapy and sport performance in general. 
 I've been with my partner McKenna since 2013 and we got married in 2021.
 
-![](/images/about/tiger.png)
+![](/images/about/tiger.jpg)
