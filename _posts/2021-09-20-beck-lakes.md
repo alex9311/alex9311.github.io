@@ -5,20 +5,21 @@ date:   2022-09-20
 categories: backpacking sierra
 ---
 
-In 2022, some fellow UCSB crew alumni and I decided to go backpacking in the Sierras.
-We initially were planning on the popular Thousand Island Lake area but didn't manage to get passes.
-In browsing the recreation.gov website for wilderness permits that hadn't sold out yet, we saw Beck Lakes in the Inyo National Forest.
+I experimented with ChatGPT while writing this blog, so please forgive some of the more loquatious language it decided to use.
 
-Beck Lakes is "next door" to the Thousand Island area and is accessed via the Devils Postpile National Monument area.
-None of us had heard of the area before and trip reports were pretty sparse, but we decided to go for it anyway.
-What we discovered was a quiet trail system full of pristine alpine lakes and a great mix of dramatic rock faces and quiet forests.
+In 2022, my fellow UCSB crew alumni and I embarked on an exciting backpacking trip in the Sierras.
+Our initial plan to visit the popular Thousand Island Lake area didn't work out due to limited passes.
+However, while browsing the wilderness permits available on recreation.gov, we stumbled upon Beck Lakes in the Inyo National Forest.
 
-We planned a three day trip that loop through several lakes and gave us a lot of options to pick camp spots as we went.
-The big picture was a counter-clockwise loop using the Superior Lake Trail, Holcomb Lake Trail, and Summit Meadow Trail.
-The loop had several out-and-back options to different lakes along the way.
+Beck Lakes, located "next door" to the Thousand Island area, could be accessed via the Devils Postpile National Monument.
+Although we hadn't heard much about this place and trip reports were scarce, we decided to seize the opportunity and go for it.
+Little did we know that we were about to discover a serene trail system, encompassing pristine alpine lakes, breathtaking rock faces, and tranquil forests.
+
+Our plan was to embark on a three-day trip, following a loop that would take us through several lakes and offer numerous options for selecting our campsites as we progressed.
+The overall route involved a counter-clockwise journey utilizing the Superior Lake Trail, Holcomb Lake Trail, and Summit Meadow Trail.
+Additionally, the loop featured several out-and-back options to various lakes along the way.
 
 ![](/images/beck-lakes/beck-full-map.png)
-
 
 | Day | Start/End                         | Mileage | Elevation |
 |-----|-----------------------------------|---------|-----------|
@@ -27,115 +28,115 @@ The loop had several out-and-back options to different lakes along the way.
 | 3   | Fern Lake to Devil's Postpile     | 5.5mi   | 600ft     |
 
 ### Day 0: Travel and Prep
-I flew direct from Seattle to Fresno on Friday afternoon to meet my friend Demi who lives there.
-After a quick Chipotle dinner, we headed off to Mammoth Lakes.
-This drive goes through Yosemite National Park which is one of the most scenic drives in the country.
-The valley is absolutely massive all around you as you drive into, through, and out of it.
+To kick off our adventure, I flew directly from Seattle to Fresno on a Friday afternoon to meet up with my friend Demi, who lives there.
+Following a quick dinner at Chipotle, we set off for Mammoth Lakes.
+The drive took us through Yosemite National Park, providing us with one of the most picturesque drives in the country.
+The vastness of the valley surrounded us as we made our way into, through, and out of it.
 
 ![](/images/beck-lakes/beck-el-cap.jpg)
 
-We met Lucas and Evan at an AirBnb in Mammoth Lakes.
-I love staying in Mammoth in the Summer, accommodations are very inexpensive compared to winter and the town is quiet.
-We did a bit of gear prep and food shopping, but it was mostly just fun to be together with old friends again.
+Upon arrival in Mammoth Lakes, we met up with Lucas and Evan at an Airbnb.
+I particularly enjoyed staying in Mammoth during the summer as the accommodations were affordable compared to winter, and the town exuded a tranquil ambiance.
+We spent some time preparing our gear and buying supplies, but the real joy was simply being together with old friends once again.
 
 ### Day 1: Elevation and Thunder
-It was about a 45min drive from our bnb to the Devils Postpile Trailhead.
-Since we weren't in peak season, we were able to drive our own car directly into the monument visitor area.
-I believe there is a bus system that must be used when accessing the trailhead in peak season.
-Before setting off on our, we took the short walk to the Devils Postpile National Momument.
+After a 45-minute drive from our Airbnb, we reached the Devils Postpile Trailhead.
+Since it wasn't peak season, we were fortunate to drive our own car directly into the monument visitor area.
+In peak season, access to the trailhead would typically require utilizing a bus system
+Before start on our hike, we took a short walk to visit the famous postpile.
 
 ![](/images/beck-lakes/beck-postpile.jpg)
 
-We started up the Beck Lake trail around 11am.
-The trails starts off around 7500ft elevation and is a pretty consistent climb for the first five miles all the way to 9300ft.
-Around mile five, we got some rolling hills and flat trails with great views of the surrounding mountains.
+We started our journey along the Beck Lake trail at around 11 am.
+Starting at an elevation of approximately 7500 feet, the trail involved a consistent climb for the first five miles, ultimately reaching an elevation of 9300 feet.
+Around the fifth mile, the terrain transitioned into rolling hills and flat trails, treating us to magnificent views of the surrounding mountains.
 
 ![](/images/beck-lakes/beck-day1-pano.jpg)
 
-At mile 6.5, there is a fork in the trail.
-One can either go right (off the main loop), toward Superior and Beck Lakes, or continue left along the main loop.
-We went right.
-Around mile 7.5, we reached our first lake of the loop: Superior Lake.
-Superior Lake was awesome, we enjoyed a break and some snacks by its side.
-We decided to push on to Upper and Lower Beck Lakes before calling it a day though.
+At the 6.5-mile mark, we encountered a fork in the trail.
+One option was to veer right, deviating from the main loop and heading toward Superior and Beck Lakes.
+Hoping to see as many lakes as possibnle, we took the rightward path.
+As we approached the 7.5-mile mark, we reached our first lake of the loop: Superior Lake.
+The sight of Superior Lake was breathtaking, and we couldn't resist taking a break to enjoy some snacks by its tranquil shores.
+However, we were determined to continue our journey and explore Upper and Lower Beck Lakes before calling it a day.
 
 ![superior lake](/images/beck-lakes/beck-day1-superior.jpg)
 
-On our way up to Lower Beck Lake, some weather started to roll in.
-There were a few pretty spooky thunderclaps and lightning strikes nearby, though we felt somewhat safe being in a valley rather than exposed on a ridge.
-We eventually took shelter under some trees, but not before we all got quite soaked for the rest of the day.
-We eventually pushed on and found Lower Beck Lake.
-This was the highest point of the whole weekend for us, at about 9600ft elevation.
-Though the lake was dramatic and beautiful, all the area surrounding was rocky and exposed -- not ideal for campsites.
-There were a few one or two person potential sites, but nothing for our group of four.
+While making our way to Lower Beck Lake, we noticed the weather taking a turn. 
+Ominous clouds gathered, accompanied by thunderclaps and nearby lightning strikes.
+Although we felt relatively safe being in a valley rather than exposed on a ridge, we sought shelter under some trees as the rain began to soak us. 
+Determined to press on, we persevered and eventually reached Lower Beck Lake. 
+This lake marked the highest point of our entire weekend adventure, situated at an elevation of approximately 9600 feet.
+Despite its dramatic beauty, the rocky and exposed surroundings didn't offer ideal campsites for our group of four.
+While there were a few potential one or two-person sites, none were suitable for our group.
 
 ![lower beck lake](/images/beck-lakes/beck-day1-lower-beck.jpg)
 
-We decided to go back down towards Superior Lake and camp in a spot we had noticed on the way up.
-We found it eventually and were satisfied enough with it to call it a day.
-It had a stream nearby, tree cover in case of more rain, and flat/soft dirt ground.
+After careful consideration, we decided to backtrack towards Superior Lake and set up camp at a spot we had noticed on the way up.
+We eventually located a satisfactory site, featuring a nearby stream, ample tree cover in case of further rain, and flat, soft dirt ground to pitch our tents.
+
 
 ### Day 2: Swimming in Holcomb Lake and Posh Campsite
-We woke up to a wonderful view of the ridge above our campsite getting lit up by the rising sun.
-After enjoying some oatmeal and letting the sun thaw us out a bit, we got packed up and started hiking.
+We woke up to a marvelous view of the ridge above our campsite, bathed in the golden hues of the rising sun.
+After savoring a nourishing breakfast of oatmeal and allowing the sun to warm our spirits, we packed up our gear and resumed our hike.
 
 ![morning](/images/beck-lakes/beck-day2-morning.jpg)
 
-The first section of the day was hiking the 1.5 miles back to to the main loop.
-Only a half mile further along, we took the option to leave the main loop again.
-This out-and-back would be to visit Noname and Holcomb Lake.
+The initial section of the day involved a 1.5-mile trek back to the main loop. 
+Only half a mile further along, we opted to deviate from the main loop once again.
+This time, it would be an out-and-back excursion to visit Noname and Holcomb Lake.
 
-Our surroundings went from shady forests to more exposed rocky scenery.
-We had a few great views of King Creek as it ran down the rocks and even formed a few small waterfalls.
+Our surroundings transitioned from shaded forests to a more exposed and rocky landscape.
+Along the way, we were treated to views of King Creek as it cascaded down the rocks, creating a few miniature waterfalls.
 
 ![king creek](/images/beck-lakes/beck-day2-king-creek.jpg)
 
-We got a little lost on the way to Noname lake but found the trail again using our GPS apps.
-We were finally fully dried out by the time we reached Noname lake and the sun was fully coming out.
-With a plan to have lunch at Holcomb, we only stayed at Noname for a short break.
+While navigating our way to Noname Lake, we momentarily lost the trail but managed to find our bearings using GPS apps.
+By the time we reached Noname Lake, we had fully dried off, and the sun was radiating its warmth.
+Since we planned to have lunch at Holcomb Lake, we only took a short break at Noname.
 
-Holcomb turned out to be our favorite lake of the whole trip.
-The weather was perfect, the lake was deep and clear, and we had it nearly to ourselves.
-There was even a perfect jumping rock!
-We all had a swim in the lake and enjoyed lunch in the sun.
+Holcomb Lake turned out to be our favorite lake of the entire trip.
+The weather was perfect, the lake was deep and clear, and we practically had it all to ourselves.
+Additionally, we discovered a perfect jumping rock, adding an element of adventure to our swim in the crystalline waters.
+Basking in the sun, we enjoyed our lunch on some warm rocks.
 
 ![holcomb](/images/beck-lakes/beck-day2-holcomb.jpg)
 
-From Holcomb Lake, it was about 1.5 miles back to the main loop.
-After about 1.5 more miles along the main loop, we took our final out-and-back towards Fern and Anona Lake.
-Fern Lake is only a quarter mile from the main loop.
-Exploring around Fern Lake for a bit, we found some really great campsite options.
-We debated about whether we should push on to Anona with all our gear or leave our gear behind at a camp at Fern Lake.
-We ultimately decided it was worth bringing our full packs up to Anona so we'd have the option to camp there.
+From Holcomb Lake, it was about 1.5 miles to return to the main loop.
+After covering a further 1.5 miles along the main loop, we started on our final out-and-back toward Fern and Anona Lake.
+Fern Lake was only quarter-mile from the main loop. 
+As we explored the vicinity of Fern Lake, we stumbled upon some great potential campsites.
+The question arose whether we should continue to Anona Lake with our fully loaded packs or leave our gear behind at a campsite near Fern Lake.
+Ultimately, we decided it was worth carrying our packs to Anona to have the option of camping there.
 
-The hike up to Anona was pretty steep and rocky, but it was fun to see Fern lake from such a high vantage.
-After gaining the ridge above Fern, it was a pretty short walk to Anona.
-We wandered around Anona for a while looking for a site but didn't find any we liked as much as the spots around Fern Lake.
-We were particularly worried about having enough tree cover in case of rain.
+The hike to Anona proved to be steep and rocky, but it afforded us a thrilling view of Fern Lake from a lofty vantage point.
+After ascending the ridge above Fern Lake, we had a relatively short walk to reach Anona.
+We wandered around Anona for a while, searching for good campsites, but none were as good as those around Fern Lake.
+Our main concern was having sufficient tree cover in case of rain.
 
 ![anona](/images/beck-lakes/beck-day2-anona.jpg)
 
-We trekked back down to Fern lake and set up camp for the night.
-Our site had plenty of tree cover, flat areas for several tents, and even a rock table and log benches to eat at.
-
+With this in mind, we retraced our steps back down to Fern Lake, where we set up camp for the night.
+Our chosen site offered an abundance of tree cover, flat areas for multiple tents, and even a rock table with log benches—an inviting space for communal meals.
 
 ### Day 3: Hike out
-On our final morning, we woke to a perfectly still Fern lake just a hundred yards from our camp.
-The moon and the ridges surrounding the lake were mirrored exactly in the glassy water.
+On our final morning, we awoke to a perfectly still Fern Lake, just a stone's throw away from our campsite.
+The moon and the ridges encircling the lake were reflected with remarkable clarity in the glassy water.
 
 ![anona](/images/beck-lakes/beck-day3-fern.jpg)
 
 The hike out was our shortest day.
-There were a few sections through forests that had burned in the previous years that were more exposed and sandy -- slowing our progress a bit.
-What stuck out from the day was the scale of the views looking East.
+There were a few sections passing through forests that had been ravaged by fire in previous years.
+These areas were more exposed and sandy, which slightly impeded our progress. 
+However, what truly left a lasting impression were the awe-inspiring vistas that opened up before us as we looked east.
 
 ![day 3](/images/beck-lakes/beck-day3.JPG)
 
 ### Wrap Up
-I'd highly recommend the Beck Lakes area.
-It was quiet, beautiful, accessible, and there are lots of routing options.
-There are several more lakes we didn't visit, and there are even exciting summit routes from up the nearby Iron Mountain for those inclined to bag the peak.
+I highly recommend the Beck Lakes area to fellow backpacking enthusiasts. 
+It offers a peaceful and beautiful environment, easy accessibility, and numerous routing options.
+There are several more lakes in the area that we didn't have the opportunity to visit, and adventurous souls can even embark on exciting summit routes to Iron Mountain, located nearby.
 
-At a personal level, this trip was very important to me.
-It was the first meaningful "adventure" I'd had since my foot surgery in March 2022 and it went perfectly.
-Nothing beats good company and nature all around you!
+On a personal level, this trip held great significance for me. 
+It was my first meaningful adventure since undergoing foot surgery in March 2022.
+Nothing compares to the joys of good company and being surrounded by the wonders of nature in all its glory!
