@@ -20,7 +20,7 @@ HRNet outperformed all existing methods on Keypoint Detection, Multi-Person Pose
 See the results table below for details.
 At the time of writing this post, the paper already had 90 citation and the github [repo](https://github.com/leoxiaobin/deep-high-resolution-net.pytorch) has over 2k stars and nearly 500 forks.
 
-![images/pose-estimation-hrnet-evaluation.png](/images/pose-estimation-hrnet-evaluation.png)
+![images/pose-estimation-hrnet-evaluation.png](/images/pose-estimation/pose-estimation-hrnet-evaluation.png)
 
 Despite the success and popularity of the project, the repo has a number of issues opened by folks having trouble using the model from the paper in their own projects.
 After reviewing the issues and struggling to use the model on my own videos, I identified **three problems** to solve:
@@ -88,12 +88,12 @@ Below, you can see how much adding the person detector helps the pose estimation
 The top video is the result of running pose estimation on the full frame.
 The bottom video is the result of detecting Stalone and running the pose estimator on a tight crop of just him.
 
-![images/pose-estimation-no-person-detect.gif](/images/pose-estimation-no-person-detect.gif)
-![images/pose-estimation-no-person-detect.gif](/images/pose-estimation-rocky.gif)
+![images/pose-estimation-no-person-detect.gif](/images/pose-estimation/pose-estimation-no-person-detect.gif)
+![images/pose-estimation-no-person-detect.gif](/images/pose-estimation/pose-estimation-rocky.gif)
 
 The diagram below shows the full inference process including the missing pieces I added.
 
-![images/pose-estimation-diagram.png](/images/pose-estimation-diagram.png)
+![images/pose-estimation-diagram.png](/images/pose-estimation/pose-estimation-diagram.png)
 
 ## Apply Pose Estimation to Rowing
 Great!
@@ -194,20 +194,20 @@ I had a grainy erg video from a friend to test the smoothing on.
 In the video below, the **original predicted coordinates are shown in green and the adjusted coordinates are shown in red**.
 You can see when one of the green points goes way off the hand position, the red coordinate for the same frame is much closer to the correct location.
 
-![/images/pose-estimation-smooth-points.gif](/images/pose-estimation-smooth-points.gif)
+![/images/pose-estimation-smooth-points.gif](/images/pose-estimation/pose-estimation-smooth-points.gif)
 
 With my smoothing and speed code, it was time to check out hand speed on a pro!
 <a href="https://en.wikipedia.org/wiki/Eric_Murray_(rower)">Eric Murray</a>, a 2x olympic gold medal rower, posts videos of himself erging on youtube.
 I grabed a short clip of him erging and ran my code.
 
-![/images/pose-estimation-eric-murray.gif](/images/pose-estimation-eric-murray.gif)
+![/images/pose-estimation-eric-murray.gif](/images/pose-estimation/pose-estimation-eric-murray.gif)
 
 The output video looked promising but graphing the hand speed really brought out the speed pattern.
 The drives are the higher peaks and the recovery are the lower peaks.
 This indicates lower hand speed during recovery than during the drive, which is good form!
 You can also see that hand speed increases through the drive and is more consistent during recovery which is also correct.
 
-![/images/pose-estimation-graph-hand-speed.png](/images/pose-estimation-graph-hand-speed.png)
+![/images/pose-estimation-graph-hand-speed.png](/images/pose-estimation/pose-estimation-graph-hand-speed.png)
 
 ## Thoughts
 I had a lot of fun bringing the pretty raw HRNet model into something that could be used fairly easily on a video.

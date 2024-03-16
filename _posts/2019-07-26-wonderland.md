@@ -26,14 +26,14 @@ We each had a hydration pack or small backpack with the [10 essentials](https://
 We also had a few water filters to share between us.
 
 ### Day 1: Longmire to White River
-![](/images/wonderland-day1-profile.png)
+![](/images/wonderland/wonderland-day1-profile.png)
 
 Our first day would be about 32 miles with 8900ft of gain.
 A 5AM, Wilson, Ben and I departed Seattle and drove out to Longmire Trailhead.
 After about 2 hours, we pulled into the parking lot and met Chris, who had camped out the night before.
 We got our day hiker permits from the rangers there, got our gear together, and took our first steps on the trail.
 
-![](/images/wonderland-day1-1.jpg)
+![](/images/wonderland/wonderland-day1-1.jpg)
 
 The first 13 miles, from Longmire (2800ft) to Box Canyon (3000ft), were pretty reasonable.
 The first 5.5 miles were a gentle climb of about 2000ft over 5.5miles to Reflection Lake which had a fantastic view of Rainier.
@@ -44,14 +44,14 @@ Indian Bar was 8 miles further along a fairly exposed trail.
 We neglected to fill our water bladders at the last source before the main climb and were all out when we reached the top.
 We were all a bit torched at Indian Bar so we took a long lunch there.
 
-![](/images/wonderland-day1-2.jpg)
+![](/images/wonderland/wonderland-day1-2.jpg)
 
 Indian Bar was about 20 miles in, so we had another 12 to go after lunch.
 The first 2.5 after lunch was a tough 1500ft climb up to Panhandle Gap.
 Working out directly after a big meal is tough, something about blood being in your stomach instead of your legs.
 In any case, from Panhandle Gap (6700ft), we descended down to White River (4200ft) over about 8 miles.
 
-![](/images/wonderland-day1-3.jpg)
+![](/images/wonderland/wonderland-day1-3.jpg)
 
 The miles after Panhandle Gap had a bit of snow on them, even enough for some glissading!
 This was also the section where we ran into Kaytlyn Gerbin and Alex Borsuk, who were claiming the [fastest female known time for the Rainier Infinity Loop](https://fastestknowntime.com/fkt/kaytlyn-gerbin-alex-borsuk-rainier-infinity-loop-wa-2019-07-30).
@@ -62,13 +62,13 @@ Sadly, the river was way too cold for much bathing, but we made do with the sink
 I usually don't sleep great in tents but after a day like that, I had no problem getting some rest.
 
 ### Day 2: White River to Mowich Lake
-![](/images/wonderland-day2-profile.png)
+![](/images/wonderland/wonderland-day2-profile.png)
 
 I woke up on the morning of day 2 feeling much better than expected.
 We had the shortest day ahead of us, with only 24 miles and 7100ft of gain to deal with.
 That being said, the first 2.5 miles were a lovely 2000ft climb up to Sunrise Camp (6250ft) to tire us out off the bat.
 
-![](/images/wonderland-day2-2.jpg)
+![](/images/wonderland/wonderland-day2-2.jpg)
 
 Following that we had some rolling hills and light elevation through Berkeley Park.
 This was one of my favorite sections of the trail, long sweeping fields with mist rolling in and out.
@@ -84,7 +84,7 @@ After Ipsut Creek comes one of the gnarliest climbs of the loop.
 Ipsut Creek to Ipsut Pass (5000ft) is about 2700ft of elevation gain over 3.5 miles.
 We took it slow and steady and enjoyed some great views of the valley behind us as we got higher up.
 
-![](/images/wonderland-day2-3.jpg)
+![](/images/wonderland/wonderland-day2-3.jpg)
 
 Mowich Lake was just an easy 1.5 mile light downhill shuffle from the top of Ipsut Pass.
 Coming into camp and seeing Noah's group all cooking and hanging out was a great sight.
@@ -92,10 +92,10 @@ It took us just under 8 hours to get from White Rive to Mowich Lake, six hours o
 We had some great chili and mountain house meals for dinner.
 While Mowich lake doesn't have running water or fire pits like White River, we were able to get a good cleaning in the lake.
 
-![](/images/wonderland-day2-4.jpg)
+![](/images/wonderland/wonderland-day2-4.jpg)
 
 ### Day 3: Mowich Lake to Longmire
-![](/images/wonderland-day3-profile.png)
+![](/images/wonderland/wonderland-day3-profile.png)
 
 Day 3 was by far the hardest day.
 Not only did we have 32 miles with 8000ft of elevation gain to get through, we also had at least 10000ft of descent to run.
@@ -114,7 +114,7 @@ This climb was the second out of four we had on tap for the day.
 We were pretty spent by the time we reached Klapatche Park so we stopped for lunch there along Aurora Lake.
 We were about 17.5 miles in at this point.
 
-![](/images/wonderland-day3-1.jpg)
+![](/images/wonderland/wonderland-day3-1.jpg)
 
 Time for another descent and climb!
 This time we came down to South Puyallup River (4000ft) and had a mercifully shorter climb up to Emerald Ridge (5600ft).
@@ -122,7 +122,7 @@ Emerald Ridge was another highlight of the trip for me.
 All of the wildflowers were blooming and Rainier was poking out of the clouds just enough.
 Three of the four big climbs for the day were now behind us!
 
-![](/images/wonderland-day3-2.jpg)
+![](/images/wonderland/wonderland-day3-2.jpg)
 
 Descending off Emerald Ridge to Tahoma Creek (4200ft) was probably the low point of the trip for me.
 The trail was extremely rocky and technical, and my hips/knees were starting to go by that point.
@@ -130,7 +130,7 @@ After a quick break at Tahoma Creek, we go through the last notable climb of our
 Once we reached Devil's Dream, we only had about 5.5 miles of almost entirely downhill left to go.
 We were all hurting at this point but we got through it and ran the last 2 miles all together.
 
-![](/images/wonderland-day3-3.jpg)
+![](/images/wonderland/wonderland-day3-3.jpg)
 
 We took just under 10 hours to get from Mowich Lake to Longmire, 8.25 hours of which we were moving.
 
