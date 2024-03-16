@@ -32,3 +32,5 @@ gem 'jekyll-sitemap'
 
 # vulnerability found
 gem "kramdown", ">= 2.3.0"
+
+gem "webrick", "~> 1.8"
