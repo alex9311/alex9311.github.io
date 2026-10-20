@@ -1,4 +1,4 @@
-My blog site hosted at [http://www.alexandersimes.com](http://www.alexandersimes.com).
+My old blog that is no longer published.
 Has tech and outdoor adventure content.
 
 # Development
